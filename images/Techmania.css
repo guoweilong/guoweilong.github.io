@@ -27,28 +27,28 @@ h1, h2, h3, h4 {
 	font-weight: bold;
 }
 h1 {
-	font-size: 1.5em;	
+	font-size: 1.8em;	
 }
 h2 {
-	font-size: 1.4em;
+	font-size: 1.7em;
 	text-transform: uppercase;
 	color: #339900;
 }
 h3 {
-	font-size: 1.3em;
+	font-size: 1.6em;
 	text-transform: uppercase;
 	color: #333;
 	letter-spacing: 1px;
 }
 h4 {
-	font-size: 1.1em;
+	font-size: 1.4em;
 	color: #666;
 	letter-spacing: 1px;
 	padding: 0;
 	margin: 5px 40px; 
 }
 p {
-    font-size: 1.4em;	
+    font-size: 1.7em;	
 }
 
 h1, h2, h3, p { 
@@ -57,7 +57,7 @@ h1, h2, h3, p {
 }
 
 ul, ol {
-    font-size: 1.3em;	
+    font-size: 1.7em;	
 	margin: 10px 30px;
 	padding: 0 15px;	
 	color: #72A545;	
