@@ -184,8 +184,15 @@ input.button {
 /* header */
 #header {
 	position: relative;
-   clear:left;
-   width: 990px;
+    clear:left;
+    width: 990px;
+	height: 50px; 
+	margin: 0; padding: 0;
+	background: #006000 no-repeat left bottom;			
+}#header.old {
+	position: relative;
+    clear:left;
+    width: 990px;
 	height: 135px; 
 	margin: 0; padding: 0;
 	background: #000 url(new_header.jpg) no-repeat left bottom;			
