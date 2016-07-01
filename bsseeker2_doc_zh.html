@@ -1,24 +1,516 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Style-Type" content="text/css" />
-  <meta name="generator" content="pandoc" />
-  <title></title>
-  <style type="text/css">code{white-space: pre;}</style>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<meta charset="utf-8">
+
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+<style type="text/css">
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	background: none;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #a67f59;
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.function {
+	color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+</style>
+
+<style type="text/css">
+pre.line-numbers {
+	position: relative;
+	padding-left: 3.8em;
+	counter-reset: linenumber;
+}
+
+pre.line-numbers > code {
+	position: relative;
+}
+
+.line-numbers .line-numbers-rows {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	font-size: 100%;
+	left: -3.8em;
+	width: 3em; /* works for line-numbers below 1000 lines */
+	letter-spacing: -1px;
+	border-right: 1px solid #999;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+
+	.line-numbers-rows > span {
+		pointer-events: none;
+		display: block;
+		counter-increment: linenumber;
+	}
+
+		.line-numbers-rows > span:before {
+			content: counter(linenumber);
+			color: #999;
+			display: block;
+			padding-right: 0.8em;
+			text-align: right;
+		}
+</style>
+
+
 </head>
+
 <body>
-<h1 id="亚硫酸盐测序bisulfite-sequencing的序列比对的基本流程">亚硫酸盐测序(bisulfite sequencing)的序列比对的基本流程</h1>
-<h5 id="by-guo-weilong-更新于2016年7月1日-联系邮箱-guoweilong艾特126点com">by Guo, Weilong; 更新于2016年7月1日; 联系邮箱: guoweilong[艾特]126[点]com</h5>
+
+<h1 id="toc_0">亚硫酸盐测序(bisulfite sequencing)的序列比对的基本流程</h1>
+
+<h5 id="toc_1">by Guo, Weilong; 更新于2016年7月1日; 联系邮箱: guoweilong[艾特]126[点]com</h5>
+
 <p>目前，DNA甲基化研究中的主要测序文库包括：WGBS（whole genome bisulfite sequencing）和RRBS（reduced representation bisulfite sequencing）。其中，WGBS的文库以MethylC-seq和PBAT为主。</p>
+
 <p>用于比对BS-seq数据并绘制DNA甲基化图谱的主流工具有：<a href="http://pellegrini.mcdb.ucla.edu/BS_Seeker2/">BS-Seeker2</a>、bismark和BSMAP。本文以BS-Seeker2(<a href="https://github.com/BSSeeker/BSseeker2">source</a>)为例，介绍BS-seq数据分析的<a href="http://pellegrini.mcdb.ucla.edu/BS_Seeker2/BSseeker2_pipeline.jpg">基本流程</a>。</p>
-<h2 id="步骤一首先建立针对bs-seq数据的index">步骤一：首先建立针对BS-seq数据的index</h2>
+
+<h2 id="toc_2">步骤一：首先建立针对BS-seq数据的index</h2>
+
 <ul>
 <li><p>BS-Seeker2和Bismark的基本策略相似，都是将基因组和测序数据看作&quot;三碱基&quot;再进行比对；在序列的比对过程中调用bowtie或者bowtie2。</p></li>
 <li><p>和bowtie/bowtie2相似，BS-Seeker2也需要首先建立一个index。但要注意的是，BS-Seeker2不能直接使用bowtie的index，而是需要创建特定的index。</p></li>
 <li><p>BS-Seeker2针对WGBS和RRBS设计了不同的创建index的策略。简言之，BS-Seeker2建立RRBS的index远小于为WGBS建立的index。该策略将大幅缩小序列比对的搜索空间，提高计算效率。<a href="https://github.com/BSSeeker/BSseeker2#qa11">&gt;&gt;QA</a></p>
-<pre><code># 建立WGBS版本的index
+
+<div><pre class="line-numbers"><code class="language-none"># 建立WGBS版本的index
 bs_seeker2-build.py -f genome.fa
 
 # 建立RRBS版本的index
@@ -28,59 +520,74 @@ bs_seeker2-build.py -f genome.fa -r
 bs_seeker2-build.py -f genome.fa -r -l 40 -u 400
 
 # 如果你的RRBS的酶切位点不是C^CGG，比如是 A^CGT和G^CWGC的组合
-bs_seeker2-build.py -f genome.fa -r -c A-CGT,G-CWGC</code></pre></li>
-<li><p>默认情况下，index会被建立在BS-Seeker2的 “./bs_utils/reference_genomes/” 目录下；如果需要改变目录，请使用 -d <path>（或--db=<path>）参数。</p></li>
-<li><p>另外，BS-Seeker2可选择bowtie或者bowtie2作为aligner（参数：--aligner=bowtie 或 --aligner=bowtie2）。利用不同的aligner建立的index也是不一样的。</p></li>
+bs_seeker2-build.py -f genome.fa -r -c A-CGT,G-CWGC</code></pre></div></li>
+<li><p>默认情况下，index会被建立在BS-Seeker2的 “./bs<u>utils/reference</u>genomes/” 目录下；如果需要改变目录，请使用 -d <path>（或&ndash;db=<path>）参数。</p></li>
+<li><p>另外，BS-Seeker2可选择bowtie或者bowtie2作为aligner（参数：&ndash;aligner=bowtie 或 &ndash;aligner=bowtie2）。利用不同的aligner建立的index也是不一样的。</p></li>
 <li><p>以人基因组为例，创建index需要花几个小时的时间。当然，这个步骤“一劳永逸”。</p></li>
 </ul>
-<h2 id="步骤二-对测序数据进行序列比对">步骤二： 对测序数据进行序列比对</h2>
+
+<h2 id="toc_3">步骤二： 对测序数据进行序列比对</h2>
+
 <ul>
 <li><p>获得测序数据，如果已经建立了index，那么就可以直接进入比对步骤。这一步骤既是“最花时间”，也是“最不花时间”的。序列比对在所有的二代测序分析中都要花费大量的时间，但是这个步骤可以通过将大数据分成小块在集群上并行运行。因而也是最容易压缩时间、提高效率的阶段。</p>
-<pre><code># split the large input file into small pieces
+
+<div><pre class="line-numbers"><code class="language-none"># split the large input file into small pieces
 split -l 4000000 input.fq spt_ 
 # align all the splitted files using bs_seeker2-align.py
 # when all the splitted files are aligned
 # merge all the generated bam files
-samtools merge merge.bam spt_*.bam</code></pre></li>
+samtools merge merge.bam spt_*.bam</code></pre></div></li>
 <li><p>序列比对阶段最简单的例子如下：</p>
-<pre><code>bs_seeker2-align.py -i test.fa -o test.bam -g genome.fa</code></pre></li>
+
+<div><pre class="line-numbers"><code class="language-none">bs_seeker2-align.py -i test.fa -o test.bam -g genome.fa</code></pre></div></li>
 <li><p>当然，-i后的输入文件可以是fastq、fasta、qseq或者 纯序列格式（即一行一个序列）。BS-Seeker2可以通过读入文本自动识别出文件的格式。如果输入文件是gzip压缩文件，请将该文件后缀名设置为“.gz”，BS-Seeker2将可直接读入压缩格式，而无须用户亲自解压。<a href="https://github.com/BSSeeker/BSseeker2#qa23">&gt;&gt;QA</a></p>
-<pre><code>bs_seeker2-align.py -i test.fa.gz  -o test.bam -g genome.fa</code></pre></li>
-<li><p>BS-Seeker2自带去除adapter序列的功能，只需要用户将adapter序列(如AGATCGGAAGAGCACACGTC)写入文件（如 adatper.txt），然后设定参数 &quot;-a&quot;即可。<a href="https://github.com/BSSeeker/BSseeker2#qa71">&gt;&gt;QA</a></p>
-<pre><code>bs_seeker2-align.py -i test.fa -o test.bam -g genome.fa -a adapter.txt</code></pre></li>
+
+<div><pre class="line-numbers"><code class="language-none">bs_seeker2-align.py -i test.fa.gz  -o test.bam -g genome.fa</code></pre></div></li>
+<li><p>BS-Seeker2自带去除adapter序列的功能，只需要用户将adapter序列(如AGATCGGAAGAGCACACGTC)写入文件（如 adatper.txt），然后设定参数 &ldquo;-a&quot;即可。<a href="https://github.com/BSSeeker/BSseeker2#qa71">&gt;&gt;QA</a></p>
+
+<div><pre class="line-numbers"><code class="language-none">bs_seeker2-align.py -i test.fa -o test.bam -g genome.fa -a adapter.txt</code></pre></div></li>
 <li><p>现在主流的BS-seq 文库都是directional的。如果你的数据是un-directional的，可以额外设定参数“-t Y”。</p></li>
 <li><p>设定mismatch的参数（含举例）：</p>
-<pre><code>-m 4     #允许一个read至多有4个mismatch
+
+<div><pre class="line-numbers"><code class="language-none">-m 4     #允许一个read至多有4个mismatch
 -m 0.04  #允许一个read至多有4%的错配：如果是150bp，即允许6个错配
-         #如果设定去掉adapter，那么reads有可能长短不一，该情况可设定百分比</code></pre></li>
+         #如果设定去掉adapter，那么reads有可能长短不一，该情况可设定百分比</code></pre></div></li>
 <li><p>BS-Seeker2输出的bam文件中只包含unique best hit。<a href="https://github.com/BSSeeker/BSseeker2#qa51">&gt;&gt;QA</a></p>
+
 <ul>
-<li>如果你需要被过滤掉的multiple hits的read的信息，可指定参数“-M XX （或--multiple-hit=XX）”。</li>
-<li>如果你需要没有任何比对位置的read的信息，可指定参数“-u XX (或--unmapped=XX)”。</li>
+<li>如果你需要被过滤掉的multiple hits的read的信息，可指定参数“-M XX （或&ndash;multiple-hit=XX）”。</li>
+<li>如果你需要没有任何比对位置的read的信息，可指定参数“-u XX (或&ndash;unmapped=XX)”。</li>
 </ul></li>
-<li><p>考虑到用户可能同时提交上百个bs_seeker2-align.py程序同时进行比对。我们将临时文件目录默认设置在各个运行节点的本地目录上 /tmp，以减少集群I/O的负担。但是如果您的服务器/tmp的空间确实有限，请利用参数“--temp_dir=XXX”手动设置临时文件存放点。在程序正常运行结束的情况下，BS-Seeker2会自动清空临时文件目录。<a href="https://github.com/BSSeeker/BSseeker2#qa14">&gt;&gt;QA</a></p></li>
-<li><p>BS-Seeker2在比对中，默认情况下会执行4个进程（directional library需要比对两套基因组，每套基因组启动两个线程：相当于 --bt-p 2 或 --bt2-p 2）。用户可以通过 --bt-p N (--bt2-p N)去设定程序实际执行过程中调用的进程数目。如果你的计算机有8个核，那么你可以将 N 设置为4。<a href="https://github.com/BSSeeker/BSseeker2#qa13">&gt;&gt;QA</a></p></li>
+<li><p>考虑到用户可能同时提交上百个bs<u>seeker2-align.py程序同时进行比对。我们将临时文件目录默认设置在各个运行节点的本地目录上 /tmp，以减少集群I/O的负担。但是如果您的服务器/tmp的空间确实有限，请利用参数“&ndash;temp</u>dir=XXX”手动设置临时文件存放点。在程序正常运行结束的情况下，BS-Seeker2会自动清空临时文件目录。<a href="https://github.com/BSSeeker/BSseeker2#qa14">&gt;&gt;QA</a></p></li>
+<li><p>BS-Seeker2在比对中，默认情况下会执行4个进程（directional library需要比对两套基因组，每套基因组启动两个线程：相当于 &ndash;bt-p 2 或 &ndash;bt2-p 2）。用户可以通过 &ndash;bt-p N (&ndash;bt2-p N)去设定程序实际执行过程中调用的进程数目。如果你的计算机有8个核，那么你可以将 N 设置为4。<a href="https://github.com/BSSeeker/BSseeker2#qa13">&gt;&gt;QA</a></p></li>
 <li><p>为了用户更灵活地配置内部的bowtie或bowtie2的执行参数，BS-Seeker2提供了向bowtie/bowtie2传递参数的接口（见bs_seeker2-align.py的参数说明）。</p></li>
 <li><p>根据经验，针对双端测序的数据，比对过程中利用单端模式相对于双端模式可以比对地“更多、更准、更高效”。虽然BS-Seeker2和其它同类软件一样，也提供了双端比对模式，如果测序读长大于80bp的话，建议使用单端模式对每个mate进行比对，最后再将生成的所有bam文件合并在一起。<a href="https://github.com/BSSeeker/BSseeker2#qa62">&gt;&gt;QA</a></p></li>
 </ul>
-<h2 id="步骤三-用于计算各个碱基位点的甲基化水平">步骤三： 用于计算各个碱基位点的甲基化水平</h2>
+
+<h2 id="toc_4">步骤三： 用于计算各个碱基位点的甲基化水平</h2>
+
 <ul>
 <li><p>下面给出基本的执行命令：</p>
-<pre><code>bs_seeker2-call_methylation.py -i test.bam -o output --db &lt;BSseeker2_path&gt;/bs_utils/reference_genomes/genome.fa_bowtie/</code></pre></li>
+
+<div><pre class="line-numbers"><code class="language-none">bs_seeker2-call_methylation.py -i test.bam -o output --db &lt;BSseeker2_path&gt;/bs_utils/reference_genomes/genome.fa_bowtie/</code></pre></div></li>
 <li><p>如果数据是WGBS或者PBAT，且基因组比较大（比如人和小鼠），该步骤的计算时间会比较长，约十个小时左右。</p></li>
-<li><p>在该步骤中，BS-Seeker2读入bam文件后，首先对bam文件进行sort，并建立bai文件索引。如果读入的文件是已经经过排序的，就可以先指定参数&quot;--sorted&quot;，为计算节省时间。</p></li>
+<li><p>在该步骤中，BS-Seeker2读入bam文件后，首先对bam文件进行sort，并建立bai文件索引。如果读入的文件是已经经过排序的，就可以先指定参数&rdquo;&ndash;sorted&quot;，为计算节省时间。</p></li>
 <li><p>该步骤中将输出WIG，CGmap和ATCGmap格式的文件；后缀名如果是“.gz”，那么输出的文件将是压缩格式的，可大大节省磁硬盘空间。</p></li>
-<li><p>在这一步骤中，BS-Seeker2还提供了额外的功能。</p></li>
+<li><p>在这一步骤中，BS-Seeker2还提供了额外的功能。</p>
+
+<ol>
+<li><p>BS-Seeker2在align步骤中，利用CH位点的甲基化信息判断read是否failed in bisulfite-conversion，并給予标签XS:i:0 或 XS:i:1。在call methylation步骤中，设置参数 “-x”（或“&ndash;rm-SX”）可移除被标记为 XS:i:1 的read。</p></li>
+<li><p>对于RRBS来说，C<sup>CGG位点上的对链是后面步骤合成并添加的，计算甲基化水平的过程中应去掉该位置。bs<u>seeker2-call</u>methylation.py</sup> 程序提供了参数“&ndash;rm-CCGG”可以在最终的结果中移除CCGG位点。<a href="https://github.com/BSSeeker/BSseeker2#qa72">&gt;&gt;QA</a></p></li>
+<li><p>对于双端测序来说，两个mate之间可能有overlap；这种情况下使用参数“&ndash;rm-overlap”，保证同一对reads的重合的区域只被计算一次。<a href="https://github.com/BSSeeker/BSseeker2#qa63">&gt;&gt;QA</a></p></li>
+</ol></li>
 </ul>
-<ol style="list-style-type: decimal">
-<li><p>BS-Seeker2在align步骤中，利用CH位点的甲基化信息判断read是否failed in bisulfite-conversion，并給予标签XS:i:0 或 XS:i:1。在call methylation步骤中，设置参数 “-x”（或“--rm-SX”）可移除被标记为 XS:i:1 的read。</p></li>
-<li><p>对于RRBS来说，C^CGG位点上的对链是后面步骤合成并添加的，计算甲基化水平的过程中应去掉该位置。bs_seeker2-call_methylation.py 程序提供了参数“--rm-CCGG”可以在最终的结果中移除CCGG位点。<a href="https://github.com/BSSeeker/BSseeker2#qa72">&gt;&gt;QA</a></p></li>
-<li><p>对于双端测序来说，两个mate之间可能有overlap；这种情况下使用参数“--rm-overlap”，保证同一对reads的重合的区域只被计算一次。<a href="https://github.com/BSSeeker/BSseeker2#qa63">&gt;&gt;QA</a></p></li>
-</ol>
-<h2 id="推荐示例仅供参考">推荐示例（仅供参考）</h2>
+
+<h2 id="toc_5">推荐示例（仅供参考）</h2>
+
 <ul>
 <li><p>WGBS</p>
-<pre><code># build index
+
+<div><pre class="line-numbers"><code class="language-none"># build index
 bs_seeker2-build.py -f hg18.fa
 
 # for single-end
@@ -94,9 +601,10 @@ Antisense.py -i R2.fq.gz -o R2_antisense.fq.gz
 bs_seeker2-align.py -i R2_antisense.fq.gz -o R2.bam -g hg18.fa
 samtools merge merge.bam R1.bam R2.bam
 bs_seeker2-call_methylation.py -i merge.bam -o output --rm-overlap -x \
-      --db &lt;BSseeker2_path&gt;/bs_utils/reference_genomes/hg18.fa_bowtie/</code></pre></li>
+      --db &lt;BSseeker2_path&gt;/bs_utils/reference_genomes/hg18.fa_bowtie/</code></pre></div></li>
 <li><p>RRBS</p>
-<pre><code># build index
+
+<div><pre class="line-numbers"><code class="language-none"># build index
 bs_seeker2-build.py -f hg18.fa -r
 
 # for single-end
@@ -110,9 +618,10 @@ Antisense.py -i R2.fq.gz -o R2_antisense.fq.gz
 bs_seeker2-align.py -i R2_antisense.fq.gz -o R2.bam -g hg18.fa -r
 samtools merge merge.bam R1.bam R2.bam
 bs_seeker2-call_methylation.py -i test.bam -o output --rm-CCGG --rm-overlap -x \
-    --db &lt;BSseeker2_path&gt;/bs_utils/reference_genomes/hg18.fa_rrbs_20_500_bowtie/</code></pre></li>
+    --db &lt;BSseeker2_path&gt;/bs_utils/reference_genomes/hg18.fa_rrbs_20_500_bowtie/</code></pre></div></li>
 <li><p>PBAT</p>
-<pre><code># build index
+
+<div><pre class="line-numbers"><code class="language-none"># build index
 bs_seeker2-build.py -f hg18.fa 
 
 # for single-end
@@ -127,7 +636,30 @@ bs_seeker2-align.py -i R1_antisense.fq.gz -o R1.bam -g hg18.fa
 bs_seeker2-align.py -i R2.fq.gz -o R2.bam -g hg18.fa
 samtools merge merge.bam R1.bam R2.bam
 bs_seeker2-call_methylation.py -i merge.bam -o output --rm-overlap -x \
-    --db &lt;BSseeker2_path&gt;/bs_utils/reference_genomes/hg18.fa_bowtie/</code></pre></li>
+    --db &lt;BSseeker2_path&gt;/bs_utils/reference_genomes/hg18.fa_bowtie/</code></pre></div></li>
 </ul>
+
+
+
+<script type="text/javascript">
+var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-(\w+)\b/i,t=0,n=_self.Prism={util:{encode:function(e){return e instanceof a?new a(e.type,n.util.encode(e.content),e.alias):"Array"===n.util.type(e)?e.map(n.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},objId:function(e){return e.__id||Object.defineProperty(e,"__id",{value:++t}),e.__id},clone:function(e){var t=n.util.type(e);switch(t){case"Object":var a={};for(var r in e)e.hasOwnProperty(r)&&(a[r]=n.util.clone(e[r]));return a;case"Array":return e.map&&e.map(function(e){return n.util.clone(e)})}return e}},languages:{extend:function(e,t){var a=n.util.clone(n.languages[e]);for(var r in t)a[r]=t[r];return a},insertBefore:function(e,t,a,r){r=r||n.languages;var l=r[e];if(2==arguments.length){a=arguments[1];for(var i in a)a.hasOwnProperty(i)&&(l[i]=a[i]);return l}var o={};for(var s in l)if(l.hasOwnProperty(s)){if(s==t)for(var i in a)a.hasOwnProperty(i)&&(o[i]=a[i]);o[s]=l[s]}return n.languages.DFS(n.languages,function(t,n){n===r[e]&&t!=e&&(this[t]=o)}),r[e]=o},DFS:function(e,t,a,r){r=r||{};for(var l in e)e.hasOwnProperty(l)&&(t.call(e,l,e[l],a||l),"Object"!==n.util.type(e[l])||r[n.util.objId(e[l])]?"Array"!==n.util.type(e[l])||r[n.util.objId(e[l])]||(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,l,r)):(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,null,r)))}},plugins:{},highlightAll:function(e,t){var a={callback:t,selector:'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'};n.hooks.run("before-highlightall",a);for(var r,l=a.elements||document.querySelectorAll(a.selector),i=0;r=l[i++];)n.highlightElement(r,e===!0,a.callback)},highlightElement:function(t,a,r){for(var l,i,o=t;o&&!e.test(o.className);)o=o.parentNode;o&&(l=(o.className.match(e)||[,""])[1],i=n.languages[l]),t.className=t.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,o=t.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l);var s=t.textContent,u={element:t,language:l,grammar:i,code:s};if(!s||!i)return n.hooks.run("complete",u),void 0;if(n.hooks.run("before-highlight",u),a&&_self.Worker){var c=new Worker(n.filename);c.onmessage=function(e){u.highlightedCode=e.data,n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(u.element),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},c.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else u.highlightedCode=n.highlight(u.code,u.grammar,u.language),n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(t),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},highlight:function(e,t,r){var l=n.tokenize(e,t);return a.stringify(n.util.encode(l),r)},tokenize:function(e,t){var a=n.Token,r=[e],l=t.rest;if(l){for(var i in l)t[i]=l[i];delete t.rest}e:for(var i in t)if(t.hasOwnProperty(i)&&t[i]){var o=t[i];o="Array"===n.util.type(o)?o:[o];for(var s=0;s<o.length;++s){var u=o[s],c=u.inside,g=!!u.lookbehind,h=!!u.greedy,f=0,d=u.alias;u=u.pattern||u;for(var p=0;p<r.length;p++){var m=r[p];if(r.length>e.length)break e;if(!(m instanceof a)){u.lastIndex=0;var y=u.exec(m),v=1;if(!y&&h&&p!=r.length-1){var b=r[p+1].matchedStr||r[p+1],k=m+b;if(p<r.length-2&&(k+=r[p+2].matchedStr||r[p+2]),u.lastIndex=0,y=u.exec(k),!y)continue;var w=y.index+(g?y[1].length:0);if(w>=m.length)continue;var _=y.index+y[0].length,P=m.length+b.length;if(v=3,P>=_){if(r[p+1].greedy)continue;v=2,k=k.slice(0,P)}m=k}if(y){g&&(f=y[1].length);var w=y.index+f,y=y[0].slice(f),_=w+y.length,S=m.slice(0,w),O=m.slice(_),j=[p,v];S&&j.push(S);var A=new a(i,c?n.tokenize(y,c):y,d,y,h);j.push(A),O&&j.push(O),Array.prototype.splice.apply(r,j)}}}}}return r},hooks:{all:{},add:function(e,t){var a=n.hooks.all;a[e]=a[e]||[],a[e].push(t)},run:function(e,t){var a=n.hooks.all[e];if(a&&a.length)for(var r,l=0;r=a[l++];)r(t)}}},a=n.Token=function(e,t,n,a,r){this.type=e,this.content=t,this.alias=n,this.matchedStr=a||null,this.greedy=!!r};if(a.stringify=function(e,t,r){if("string"==typeof e)return e;if("Array"===n.util.type(e))return e.map(function(n){return a.stringify(n,t,e)}).join("");var l={type:e.type,content:a.stringify(e.content,t,r),tag:"span",classes:["token",e.type],attributes:{},language:t,parent:r};if("comment"==l.type&&(l.attributes.spellcheck="true"),e.alias){var i="Array"===n.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(l.classes,i)}n.hooks.run("wrap",l);var o="";for(var s in l.attributes)o+=(o?" ":"")+s+'="'+(l.attributes[s]||"")+'"';return"<"+l.tag+' class="'+l.classes.join(" ")+'" '+o+">"+l.content+"</"+l.tag+">"},!_self.document)return _self.addEventListener?(_self.addEventListener("message",function(e){var t=JSON.parse(e.data),a=t.language,r=t.code,l=t.immediateClose;_self.postMessage(n.highlight(r,n.languages[a],a)),l&&_self.close()},!1),_self.Prism):_self.Prism;var r=document.currentScript||[].slice.call(document.getElementsByTagName("script")).pop();return r&&(n.filename=r.src,document.addEventListener&&!r.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",n.highlightAll)),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
+</script>
+
+<script type="text/javascript">
+!function(){"undefined"!=typeof self&&self.Prism&&self.document&&Prism.hooks.add("complete",function(e){if(e.code){var t=e.element.parentNode,s=/\s*\bline-numbers\b\s*/;if(t&&/pre/i.test(t.nodeName)&&(s.test(t.className)||s.test(e.element.className))&&!e.element.querySelector(".line-numbers-rows")){s.test(e.element.className)&&(e.element.className=e.element.className.replace(s,"")),s.test(t.className)||(t.className+=" line-numbers");var n,a=e.code.match(/\n(?!$)/g),l=a?a.length+1:1,m=new Array(l+1);m=m.join("<span></span>"),n=document.createElement("span"),n.className="line-numbers-rows",n.innerHTML=m,t.hasAttribute("data-start")&&(t.style.counterReset="linenumber "+(parseInt(t.getAttribute("data-start"),10)-1)),e.element.appendChild(n)}}})}();
+</script>
+
+<script type="text/x-mathjax-config">
+if (typeof MathJaxListener !== 'undefined') {
+  MathJax.Hub.Register.StartupHook('End', function () {
+    MathJaxListener.invokeCallbackForKey_('End');
+  });
+}
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
 </body>
+
 </html>
