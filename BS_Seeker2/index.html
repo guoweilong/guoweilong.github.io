@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>BS-Seeker2 Home Page</title>
+  <meta name="description" content="BS-Seeker2">
+  <meta name="revisit-after" content="10 days">
+  <META NAME="ROBOTS" CONTENT="BS-Seeker2, BS Seeker 2, bisulfite sequencing aligner, home page, Weilong Guo">
+  <link href="index.css" rel="stylesheet" type="text/css" />
+  <meta name="google-site-verification" content="Z1AAEFo3CIPjSdHyLm9aySty2ndU-B1BTVIPoIoOSMc" />
+</head>
+
+<body bgcolor="#E6E6E6">
+
+	<div style="background-color:#0B0B61;height:4000px;width:720px;float:center; margin:0 auto;">
+		<p align=center><img src="head.jpg" width=100%  ></img></p>
+		<div style="background-color:#AAEEFF;height:3840px;width:96%;float:center; margin:0 auto;">
+			<h2 style="text-align:center;margin-left:auto;margin-right:auto;">BS-Seeker2</h2>
+			<h4 style="text-align:center;margin-left:auto;margin-right:auto;"> A versatile aligning pipeline for bisulfite sequencing data</h4>
+			<p style="text-align:center;margin-left:auto;margin-right:auto; ">
+<a href="https://github.com/BSSeeker/BSseeker2#bs-seeker2">Documents</a> | <a href="https://github.com/BSSeeker/BSseeker2/blob/master/RELEASE_NOTES">Release Log</a> | <a href="https://github.com/BSSeeker/BSseeker2#questions--answers"> Q&amp;A </a> | <a href="https://github.com/BSSeeker/BSseeker2"> Source Code </a>| <a href="https://github.com/BSSeeker/BSseeker2/blob/master/README.md">Tutorial</a> <a href="http://guoweilong.github.io/bsseeker2_doc_zh.html"> ㊥ </a> | Jun. 6, 2017 Updated</p>
+			<div style="height:100%; width: 95%;float:center; margin: auto;">
+				<div style="height:700px; width: 50%;float:left; margin: auto;">
+					<h4> <font color="red">DOWNLOAD<a href="https://github.com/BSSeeker/BSseeker2"> newest version </a>!</font> </h4>
+					<h4> <font color="red">Archived versions:</font> </h4>
+					<p><a href="https://github.com/BSSeeker/BSseeker2/releases/tag/v2.1.1">V2.1.2</a>
+					 | <a href="https://github.com/BSSeeker/BSseeker2/releases/tag/v2.1.1">V2.1.1</a>
+					| <a href="https://github.com/BSSeeker/BSseeker2/releases/tag/v2.1.0">V2.1.0</a></p>
+					<p><a href="BSseeker2_v2.0.9.zip">V2.0.9</a> |
+					   <a href="BSseeker2_v2.0.8.zip">V2.0.8</a> |
+					   <a href="BSseeker2_v2.0.6.zip">V2.0.6</a></p>
+					<p><B><font color="red"> NOTICE</font></B> </br> The newest version (V2.1.0) has been tested on python v2.7 and pysam v0.9+/v0.8; and python v2.7 and pysam v0.75 </br> For BS-Seeker2 older versions, if you notice pysam related problem, please try a older pysam version, such as pysam v0.6.</p>
+					<h2>Features</h2>
+					<p>
+						<ul>
+							<li>WGBS / RRBS</li>
+							<li>single-end / paired-end</li>
+							<li>Local / gapped alignment</li>
+							<li>Galaxy </li>
+							<li>Input formats</li>
+							<ul><li>Fasta</li><li>Fastq</li><li>qseq</li><li>pure sequence</li></ul>
+							<li>Output formats</li>
+							<ul><li>BAM</li><li>SAM</li><li>BS_Seeker</li></ul>
+						</ul>
+						See more from <a href=""> here </a>
+					</p>
+				</div>
+
+				<hr>
+
+				<div style="height:450px; width: 50%;float:right; margin: auto;">
+					<img src="BSseeker2_pipeline.jpg" width=150% border="10" style="border:10px solid #0B0B61;"  />
+				</div>
+				
+				<div style="height:100%; width: 100%;float:right; margin: auto;">
+					<hr>
+					<h2>"How can I use BS-Seeker2?"</h2>
+					<ul>
+					<li>Command line</li>
+					<p> Read <a href="https://github.com/BSSeeker/BSseeker2#3-system-requirements"> requirements </a>. Download <a href="https://github.com/BSSeeker/BSseeker2"> newest version </a>.  Run BS-Seeker2 following the <a href="https://github.com/BSSeeker/BSseeker2#4-modules-descriptions">documents</a>.</p>
+					<li>Galaxy</li>
+					<p><ul>
+						<li> UCLA : <a href="http://galaxy.hoffman2.idre.ucla.edu">Hoffman2</a> or <a href="http://galaxy.mcdb.ucla.edu">MCDB</a> using your own account.</li>
+						<li> Apply MCDB galaxy account by emailing <a href="mailto:wyan@chem.ucla.edu">Weihong Yan</a> and tell that you love "BS-Seeker2"!</li>
+						<li> Galaxy <a href="http://toolshed.g2.bx.psu.edu/view/weilong-guo/bs_seeker2">Toolshed</a> </li>
+					</ul></p>
+
+
+					</ul>
+					
+					<hr>
+                   
+					<h2>"Can you give me some examples to start with BS-Seeker2?"</h2>
+					<p>Sure! But you should know that our BS-Seeker2 is very versatile, and you can make a better use of it by reading more about the help information.</p>	
+					<p>
+							<p><strong>1. Build the index</strong></p>
+							<p>
+								<div style="border:5px solid #0B0B61; background-color:#FFFF99; height:320px; width:120%; float:right; margin:0 auto;">
+									<p><B> # WGBS, using bowtie2 (path of bowtie should be included in $PATH)</B></p>
+									<code>python bs_seeker2-build.py -f genome.fa</code>
+									<p><B> # RRBS, using bowtie</B></p>
+									<p><code>python bs_seeker2-build.py -f genome.fa --aligner=bowtie -p ~/install/bowtie/ -r</code></p>
+									<p><B> # RRBS, with fragment lengths ranging [40bp, 400bp]</B></p>
+									<p><code>python bs_seeker2-build.py -f genome.fa -r -l 40 -u 400</code></p>
+									<p><B> # RRBS for double-enzyme : MspI (C'CGG) and ApeKI (G'CWGC)</B> </p>
+									<p><code>python bs_seeker2-build.py -f genome.fa -r -c C-CGG,G-CWGC</code></p>
+								</div>
+							</p>
+
+							<p><strong>2. Map the reads</strong> </p>
+							<p>
+								<div style="border:5px solid #0B0B61; background-color:#FFFF99; height:480px; width:120%; float:center; margin:0 auto;">
+									<p><B># WGBS, FASTA, bowtie2 (local alignment), allowing 3 mismatches</B></p>
+									<p><code>python bs_seeker2-align.py -i WGBS.fa -m 3 --aligner=bowtie2 -o WGBS.bam -f bam -g genome.fa</code></p>
+									<p><B># RRBS, FASTQ, bowtie, output as SAM</B></p>
+									<p><code>python bs_seeker2-align.py -i RRBS.fq --aligner=bowtie -o RRBS.sam -f sam -g genome.fa -r -a adapter.txt</code></p>
+									<p><B># RRBS, QSEQ, bowtie2 (end-to-end alignment), fragment lengths ranging [40bp, 400bp]</B></p>
+									<p><code>python bs_seeker2-align.py -i RRBS.qseq --aligner=bowtie2 --bt2--end-to-end -o RRBS.bam -f bam -g genome.fa -r --low=40 --up=400 -a adapter.txt</code></p>
+                                                                        <p><B># Paired-end, QSEQ, bowtie, report concordant reads, and remap the unmapped reads in single-end mode</B></p>
+
+                                                                        <p><code>
+	# Output the unmapped reads in PE mode</br>
+        bs_seeker2-align.py -1 FN1 -2 FN2  -g genome.fa -o PE.bam -u unmapped </br>
+	# Map the unmapped reads in mate 1 </br>
+        bs_seeker2-align.py -i unmapped_1.fa -g genome.fa -o unmapped_1.bam </br>
+	# Convert the unmapped reads in mate 2 to their reverse complementaries </br>
+        Antisense.py -i unmapped_2.fa -o unmapped_2_antisense.fa </br>
+	# Map the unmapped reads in mate 2</br>
+        bs_seeker2-align.py -i unmapped_2_antisense.fa -g mm9_phage.fa -o unmapped_2.bam
+	# Merge all the mapped results</br>
+	samtools merge merge.bam PE.bam unmapped_[12].bam
+									</code></p>
+
+
+								</div>
+							</p>
+							
+							<p><strong>3. Call the methylation levels</strong></p>
+							<p>
+								<div style="border:5px solid #0B0B61; background-color:#FFFF99; height:360px; width:120%; float:right; margin:0 auto;">
+									<p><B># WGBS, bowtie</B></p>
+									<p><code>python bs_seeker2-call_methylation.py -i WGBS.bam -o output --db /path/to/BSseeker2/bs_utils/reference_genomes/genome.fa_bowtie/</code></p>
+									<p><B># RRBS, bowtie2, fragment lengths ranging [40bp, 400bp]</B></p>
+									<p><code>python bs_seeker2-call_methylation.py -i RRBS.bam -o output --db /path/to/BSseeker2/bs_utils/reference_genomes/genome.fa_rrbs_40_400_bowtie2/</code></p>
+									<p><B># RRBS, bowtie2, removing the incomplete bisulfite converted reads</B></p>
+									<p><code>python bs_seeker2-call_methylation.py -x -i RRBS.bam -o output --db /path/to/BSseeker2/bs_utils/reference_genomes/genome.fa_rrbs_40_500_bowtie2/</code></p>
+									<p><B># RRBS, only show sites covered by at least 10 reads in WIG file</B></p>
+									<p><code>python bs_seeker2-call_methylation.py -r 10 -i RRBS.bam -o output --db /path/to/BSseeker2/bs_utils/reference_genomes/genome.fa_rrbs_40_500_bowtie2/</code></p>
+								</div>
+							</p>
+					</p>
+					
+					<h4> &nbsp; &nbsp; &nbsp;</h4>
+					<h2>Need more information?  </h2>
+					<p> - <a href="https://github.com/BSSeeker/BSseeker2/blob/master/README.md"> Document </a> of BS-Seeker2 .</p>
+					<p> - Question and Answer <a href="https://github.com/BSSeeker/BSseeker2#questions--answers"> (Q&amp;A)</a>.</p>
+					<p> - <a href="https://github.com/BSSeeker/BSseeker2#output-files"> Output formats </a>o of BS-Seeker2.</p>
+					<p> - The <a href="https://github.com/BSSeeker/BSseeker2/blob/master/RELEASE_NOTES">LOGS</a> for releases </p>
+					
+					<h2>Do a fast test using BS-Seeker2?</h2>
+					<p>We provide a small Data set for fast testing purpose, which is in the "<em>test_data</em>" folder. Or you can download them from  <a href="https://github.com/BSSeeker/BSseeker2/tree/master/test_data"> here </a>. </p>
+					<p></p>
+					
+					<h2>Contact:</h2>
+					<p> Please contact <i><a href="http://guoweilong.github.io/">Weilong Guo</a></i> if you have any question. <br/> Email : guoweilong[aite]126.com ( Please replace "[aite]" by @ ) </p>
+					
+					<h2>Citation:</h2>
+					<p>
+						<cite>
+							Guo W, Fiziev P, Yan W, Cokus S, Sun X, Zhang MQ, Chen P, Pellegrini M. (2013). BS-Seeker2: a versatile aligning pipeline for bisulfite sequencing data. BMC Genomics, 14(1), 774.  <a href="http://www.biomedcentral.com/1471-2164/14/774">doi:10.1186/1471-2164-14-774</a>
+						</cite>
+					</p>
+					
+					<h2>Datasets for paper:</h2>
+					<p>
+						<ol>
+							<li> <a href="sup_data/DS1_WGBS_simu_perfect.fa.gz">DS1_WGBS_simu_perfect.fa</a> </li>
+							<li> <a href="sup_data/DS2_PE_simu_perfect_end1.fa.gz">DS2_PE_simu_perfect_end1.fa</a>  and  <a href="sup_data/DS2_PE_simu_perfect_end2.fa.gz">DS2_PE_simu_perfect_end2.fa</a></li>
+							<li> <a href="sup_data/DS3_RRBS_simu_perfect.fa.gz">DS3_RRBS_simu_perfect.fa</a> </li>
+							<li> <a href="sup_data/DS5_PE_simu_error_end1.fa.gz">DS5_PE_simu_error_end1.fa</a> and  <a href="sup_data/DS5_PE_simu_error_end2.fa.gz">DS5_PE_simu_error_end2.fa</a> </li>
+							<li> <a href="sup_data/DS4_WGBS_simu_error.fa.gz">DS4_WGBS_simu_error.fa</a> </li>
+							<li> <a href="sup_data/DS6_RRBS_simu_error.fa.gz">DS6_RRBS_simu_error.fa</a> </li>
+							<li> <a href="sup_data/DS7_WGBS_real.fa.gz">DS7_WGBS_real.fa</a> </li>
+							<li> <a href="sup_data/DS8_PE_real_end1.fa.gz">DS8_PE_real_end1.fa</a> and  <a href="sup_data/DS8_PE_real_end2.fa.gz">DS8_PE_real_end2.fa</a> </li>
+							<li> <a href="sup_data/DS9_RRBS_real.fa.gz">DS9_RRBS_real.fa</a> </li>
+							<li> <a href="sup_data/DS10_Phage_spikein.qseq.gz">DS10_Phage_spikein.qseq</a> </li>
+							<li> <a href="sup_data/DS11_Sample_A.qseq.gz">DS11_Sample_A.qseq </a></li>
+							<li> <a href="sup_data/DS12_Sample_B.qseq.gz">DS12_Sample_B.qseq</a> </li>
+						</ol>
+					</p>
+
+					<h2>Other link : </h2>
+					<p><a href="http://pellegrini.mcdb.ucla.edu/BS_Seeker/BS_Seeker.html"> BS Seeker</a></p>
+					<h2>Who are using BS-Seeker2?</h2>
+					<!--p><div><a href="http://www2.clustrmaps.com/user/18c10dcb9"><img src="http://www2.clustrmaps.com/stats/maps-no_clusters/pellegrini.mcdb.ucla.edu-BS_Seeker2--thumb.jpg" alt="Locations of visitors to this page" width=200 height=100 /></a></div-->
+					<p><div> <a href="https://www.revolvermaps.com/?target=enlarge&amp;i=0md203adbkb"><img src="//ra.revolvermaps.com/h/m/a/0/ff0000/128/0/0md203adbkb.png" width="480" height="240" alt="Map" style="border:0;"></a> </div>
+					</p>					
+					
+				</div>
+
+			</div>
+		</div>
+		
+	</div>
+
+</body>
+</html>
