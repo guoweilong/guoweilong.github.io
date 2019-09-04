@@ -18,10 +18,10 @@
       text-decoration: underline;
     }
     #titleBar {
-      height: 110px;
-      background-color: #3475b4;
+      height: 130px;
+      background-color: #0F6226;
       overflow: hidden;
-      border-bottom: 1px solid #3475b3;
+      border-bottom: 1px solid #0F6226;
       -moz-box-shadow:    0px 0px 10px 3px #BBC;
       -webkit-box-shadow: 0px 0px 10px 3px #BBC;
       box-shadow:         0px 0px 10px 3px #BBC;
@@ -37,10 +37,10 @@
     }
     #intro {
       background-color: #FFF;
-      margin: 0em 0em 0 0em;
+      margin: 0em 2em 0 0em;
       padding: 0em;
       text-align: center;
-      border: 1px solid #CCC;
+      border: 0px solid #CCC;
       font-size: 18px;
     }
     #intro p {
@@ -53,10 +53,10 @@
     }
     #content {
       margin: 0em auto 0em auto;
-      float: left;
+      float: center;
     }
     #main{
-      float: left;
+      float: center;
       line-height: 30px;
     }
     .caption{
@@ -78,42 +78,87 @@
     width:100px;
     height:100px;
     }
+
+    /* footer */
+    #footer { 
+      clear: both;
+      height: 45px;
+      color: #FFF;
+      background: #0F6226;
+      margin: 0;  
+      font-size: 100%;     
+    }
+    #footer a { 
+      text-decoration: none; 
+      font-weight: bold;  
+      color: #FFF; 
+    }
+    #footer #footer-left {
+      width: 68%;
+      float: left;
+      text-align: left;
+      margin: 0; padding: 10px;
+    }
+    #footer #footer-right {
+      width: 25%;
+      float: right;
+      text-align: right;
+      margin: 0; padding: 10px;
+    }
+
+
   </style>
 </head>
 <body>
   <div id="titleBar">
     <div id="container">
-      <h1>SnpHub
-      <br/>
-      <font size=3>A Shiny-based server framework for retrieving, analyzing and visualizing the large genomic variations data in a lab.</font>
-      </h1>
+      <h1> <font size=10>SnpHub</font>  </h1>
+      <h3 align="center"> <font size=4 color="#FFFFF">A uniform web server framework for exploring the large-scale genomic variations data in a lab.</font>
+      </h3>
     </div>
   </div>
   <div id="outer-content">
     <div id="content">
       <div id="main">
 
-
-        <h3 align="center">
-          <a href="https://github.com/esctrionsit/snphub">Source Code</a> &nbsp;&nbsp; |  &nbsp;&nbsp;
-          <a href="https://esctrionsit.github.io/snphub_tutorial/">Tutorial</a>  &nbsp;&nbsp; | &nbsp;&nbsp;
-          <a href="https://github.com/esctrionsit/snphub/releases">Releases</a>  &nbsp;&nbsp; | &nbsp;&nbsp;
-          <a href="https://esctrionsit.github.io/snphub_tutorial/content/Setup/quickstart.html">Quick Start</a>  &nbsp;&nbsp; | &nbsp;&nbsp;
-          <a href="">Q&A</a>  &nbsp;&nbsp; | &nbsp;&nbsp;
-          <a href="http://wheat.cau.edu.cn/Wheat_SnpHub_Portal/">Demos</a>  &nbsp;&nbsp; | &nbsp;&nbsp;
+        <div id="intro">
+        <h3 align="center" > 
+          <a href="https://github.com/esctrionsit/snphub">Source Code</a> &nbsp;&nbsp; &bull;  &nbsp;&nbsp;
+          <a href="https://esctrionsit.github.io/snphub_tutorial/">Tutorial</a>  &nbsp;&nbsp; &bull; &nbsp;&nbsp;
+          <a href="https://github.com/esctrionsit/snphub/releases">Releases</a>  &nbsp;&nbsp; &bull; &nbsp;&nbsp;
+          <a href="https://esctrionsit.github.io/snphub_tutorial/content/Setup/quickstart.html">Quick Start</a>  &nbsp;&nbsp; &bull; &nbsp;&nbsp;
+          <a href="">Q&A</a>  &nbsp;&nbsp; &bull; &nbsp;&nbsp;
           <a href="citation.html">Citation</a> 
+        </font>
         </h3>
+      </div>
 
-        <hr/>
+        <div id="content">
+          <h2> Demos </h2>
+          <p>
+            &bull; <a href="http://wheat.cau.edu.cn/Wheat_SnpHub_Portal/">Wheat-SnpHub-Portal</a> : Portal for exploring the population genomics data in wheat and its progenitors
+          </p>
+        </div>
 
-        <div align="center"> <img src="SnpHub.jpg" width="800"> </div>
-          
+        <br/>
+
+        <div id="content" align="center"> <img src="SnpHub.jpg" width="660"> <span><a href="https://www.revolvermaps.com/livestats/0zlk6vek44t/"><img src="https://ra.revolvermaps.com/h/m/a/1/ff0000/128/0/0zlk6vek44t.png" width="2" height="1" alt="Map" style="border:0;"></a> </span> </div>
+        
+        <div id="content">
+          <h2> Citation </h2>
+          <p> <font size=2> <i> Wenxi Wang*, Zihao Wang*, Xintong Li, Zhongfu Ni, Zhaorong Hu, Mingming Xin, Huiru Peng, Yingyin Yao, Qixin Sun and <B>Weilong Guo</B>. (2019) <a href="http://www.biorxiv.org/cgi/content/abstract/626705v1??collection" target="_blank">A web-server framework to explore and visualize large genomic variation data in lab and its applications to wheat and its progenitors</a>, <i> <B>bioRxiv</B></i>, 626705. <a href="http://www.biorxiv.org/cgi/reprint/626705v1??collection" target="_blank">[PDF]</a> <B>DOI:</B><a href="https://doi.org/10.1101/626705" target="_blank">doi:10.1101/626705</a> </i></font> </p>
+            <!--[IF:;5yr-IF:]--> 
+
+        </div>
 
       </div>
 
-	     <div> <span><a href="https://www.revolvermaps.com/livestats/0zlk6vek44t/"><img src="https://ra.revolvermaps.com/h/m/a/1/ff0000/128/0/0zlk6vek44t.png" width="2" height="1" alt="Map" style="border:0;"></a> </span> </div>
+	     <!--div> <span><a href="https://www.revolvermaps.com/livestats/0zlk6vek44t/"><img src="https://ra.revolvermaps.com/h/m/a/1/ff0000/128/0/0zlk6vek44t.png" width="2" height="1" alt="Map" style="border:0;"></a> </span> </div-->
     </div>
   </div>
 
+  <div id="footer">
+      <p align="center"> <br/>&copy; 2019- , Wheat Genetics & Genomics Center, Department of Crop Genomics and Bioinformatics, China Agricultural University </p>    
+  </div>  
 
 </body></html>
